@@ -1,0 +1,27 @@
+Summer(
+::root{
+  --primary: #022859;
+  --secondary: #023059;
+  --tertiary: #012340;
+  --complimentary: #186C8C;
+  --complimentary2: #1C788C;
+}
+
+Colorfull-flow
+::root{
+  --primary: #192E59;
+  --secondary: #455473;
+  --tertiary: #8090A6;
+  --complimentary: #BFA399;
+  --complimentary2: #8C7570;
+}
+
+Nature- inspired
+::root{
+  --primary: #27452F;
+  --secondary: #ABDEB8;
+  --tertiary: #61916E;
+  --complimentary: #452022;
+  --complimentary2: #916163;
+}
+
