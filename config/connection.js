@@ -12,4 +12,5 @@ const sequelize = process.env.JAWSB_URL
       },
     });
 
+
 module.exports = sequelize;
