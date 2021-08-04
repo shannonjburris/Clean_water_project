@@ -1,11 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Algae extends Model {
+class Algae extends Model {}
 
-}
-
-Post.init(
+Algae.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -30,6 +28,10 @@ Post.init(
             allowNull: false,
 
         },
+        comments:{
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         lat: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -37,6 +39,10 @@ Post.init(
         long: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        },
+        algae_type: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         microcystin: {
             type: DataTypes.STRING,
