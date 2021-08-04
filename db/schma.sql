@@ -1,1 +1,3 @@
-ss
+DROP DATABASE IF EXISTS gf2uv1kg27mtre71;
+
+CREATE DATABASE gf2uv1kg27mtre71;
