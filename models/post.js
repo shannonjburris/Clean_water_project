@@ -23,7 +23,7 @@ Post.init(
       type: DataTypes.STRING,
       references: {
         model: "user",
-        key: id,
+        key: 'id',
       },
     },
   },
