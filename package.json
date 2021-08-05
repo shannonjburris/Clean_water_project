@@ -2,7 +2,7 @@
   "name": "clean_water_project",
   "version": "1.0.0",
   "description": "Project To Create Comunnity Wide Engagement and Raise Awareness about Algae Related Issues",
-  "main": "connection.js",
+  "main": "server.js",
   "scripts": {
     "test": "node test",
     "start": "node server.js"
@@ -26,6 +26,8 @@
   "homepage": "https://github.com/shannonjburris/Clean_water_project#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
     "express-session": "^1.17.2",
