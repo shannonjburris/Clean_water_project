@@ -1,0 +1,16 @@
+:root{
+    --primary: #192E59;
+  --secondary: #455473;
+  --tertiary: #8090A6;
+  --complimentary: #BFA399;
+  --complimentary2: #8C7570;
+  }
+
+
+*{
+    margin: 0 auto;
+}
+
+html{
+    background: linear-gradient(0.25turn, var(--complimentary), var(--complimentary2), var(--secondary));
+}

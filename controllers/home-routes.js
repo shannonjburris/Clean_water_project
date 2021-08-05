@@ -1,8 +1,12 @@
 const router = require("express").Router();
 const { User, Post, Comment, Algae } = require("../models");
-const withAuth = require('..utils/auth')
+const withAuth = require('../utils/auth')
 
-routet.get('?', async(req, res) => {
+router.get ('/', (req, res) =>{
+    res.render('homepage')
+})
+
+router.get('/', async(req, res) => {
     try{
         const renderAlgaeData = await Algae.findAll({
             limit: 20,

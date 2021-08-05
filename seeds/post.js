@@ -22,6 +22,6 @@ const postData = [
         user_id: 3
     },
 ]
-const seedPost = () => User.bulkCreate(postData, {individualHooks: true});
+const seedPost = () => Post.bulkCreate(postData, {individualHooks: true});
 
 module.exports = seedPost;
