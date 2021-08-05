@@ -12,5 +12,10 @@
 }
 
 html{
-    /* background: linear-gradient(0.25turn, var(--complimentary), var(--complimentary2), var(--secondary)); */
+    background: linear-gradient(0.25turn, var(--complimentary), var(--complimentary2), var(--secondary));
+}
+
+label{
+    color: black;
+    font-size: 120%;
 }
