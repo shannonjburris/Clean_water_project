@@ -7,7 +7,7 @@ routet.get('?', async(req, res) => {
         const renderAlgaeData = await Algae.findAll({
             limit: 20,
             order:[
-                'SiteVisitDate', 'DESC'
+                'site_visit_date', 'DESC'
             ]
         })
 
