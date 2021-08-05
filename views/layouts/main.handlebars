@@ -1,34 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/Clean_water_project/public/css/style.css"/>
+  <title>Clean Water Project</title>
 </head>
-
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
+  <header>
+      <h1 class="text-center my-3">Welcome! Become an Algae Buster Today!</h1>
+    </header>
+    <nav class="navbar">
+      <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
+      {{#if loggedIn}}
+        <a
+          href="/dashboard"
+          class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25"
+        >Dashboard</a>
+        <button
+          class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3"
+          id="logout"
+        >Logout</button>
+      {{else}}
+        <a href="/signup" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25"><id
+            id="signup"
+          >Sign up</id></a>
+        <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3"><id
+            id="login"
+          >Sign In</id></a>
+
+      {{/if}}
     </nav>
+    <main>
+      <div class="body-wrapper container">
+        {{{body}}}
+      </div>
+    </main>
+    <script src="/index.js"></script>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
     {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      {{{footer}}}
-  </footer>
-
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
-
+  </body>
 </html>
+
+
+{{!-- <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+        
+To activate the dropdown menu, insert this line of code into your JavaScript file, within the $( document ).ready(function) block
+
+
+$(".dropdown-trigger").dropdown(); --}}
