@@ -9,6 +9,81 @@
       placeholder="Your Title "
     />
   </div>
+ {{!-- drop down for counties --}}
+<div class="row">
+    <div class="input-field col s6">
+        <select class="browser-default">
+            <option value="" disabled selected>Please Select County of Algae Observation</option>
+            <option value="1">Alachua</option>
+            <option value="2">Baker</option>
+            <option value="3">Bay</option>
+            <option value="4">Bradford</option>
+            <option value="5">Brevard</option>
+            <option value="6">Broward</option>
+            <option value="7">Calhoun</option>
+            <option value="8">Charlotte</option>
+            <option value="9">Citrus/option>
+            <option value="10">Clay</option>
+            <option value="11">collier</option>
+            <option value="12">Columbia</option>
+            <option value="13">Desoto</option>
+            <option value="14">Dixie</option>
+            <option value="15">Duval</option>
+            <option value="16">Escambia</option>
+            <option value="17">Flagger</option>
+            <option value="18">Franklin</option>
+            <option value="19">Gadsden</option>
+            <option value="20">Gilchrist</option>
+            <option value="21">Glades</option>
+            <option value="22">Gulf</option>
+            <option value="23">Hamilton</option>
+            <option value="24">Hardee</option>
+            <option value="25">Hendry</option>
+            <option value="26">Hernando</option>
+            <option value="27">Highlands</option>
+            <option value="28">Hillsborough</option>
+            <option value="29">Holmes</option>
+            <option value="30">Indian River</option>
+            <option value="31">Jackson</option>
+            <option value="32">Jefferson</option>
+            <option value="33">Lafayette</option>
+            <option value="34">Lake</option>
+            <option value="35">Lee</option>
+            <option value="36">Leon</option>
+            <option value="37">Levy</option>
+            <option value="38">Liberty</option>
+            <option value="39">Madison</option>
+            <option value="40">Manatee</option>
+            <option value="41">Marion</option>
+            <option value="42">Martin</option>
+            <option value="43">Miami-Dade</option>
+            <option value="44">Monroe</option>
+            <option value="45">Nassau</option>
+            <option value="46">Okaloosa</option>
+            <option value="47">Okeechobee</option>
+            <option value="48">Orange</option>
+            <option value="49">Osceola</option>
+            <option value="50">Palm Beach</option>
+            <option value="51">Pasco</option>
+            <option value="52">Pinellas</option>
+            <option value="53">Polk</option>
+            <option value="54">Putnam</option>
+            <option value="55">St. Johns</option>
+            <option value="56">St. Lucie</option>
+            <option value="57">Santa Rosa</option>
+            <option value="58">Sarasota</option>
+            <option value="59">Seminole</option>
+            <option value="60">Sumter</option>
+            <option value="61">Suwannee</option>
+            <option value="62">Taylor</option>
+            <option value="63">Union</option>
+            <option value="64">Volusia</option>
+            <option value="65">Walkulla</option>
+            <option value="66">Walton</option>
+            <option value="67">Washington</option>  
+        </select>
+    </div>    
+</div>
   {{!-- post body --}}
   <div class="mb-3 for-group">
     <label for="form-body" class="form-body">Body</label>
@@ -27,9 +102,10 @@
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text" placeholder="Upload one or more files">
         </div>
-      </div>
+
           
   </div>
   <button type="submit" class="btn btn-primary">Submit</button> 
 </form>
 <script src='/js/post-form.js'></script>
+
