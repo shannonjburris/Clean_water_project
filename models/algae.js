@@ -12,7 +12,7 @@ Algae.init(
             autoIncrement: true,
         },
         site_visit_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         location: {
@@ -36,7 +36,7 @@ Algae.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        long: {
+        lon: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },

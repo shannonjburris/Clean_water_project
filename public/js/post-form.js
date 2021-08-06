@@ -1,11 +1,9 @@
 const submitNewPostForm = async (event) => {
-    event.preventDefault();
-  
+    event.preventDefault();    
+    
   
         const title = document.querySelector('#form-title').value.trim();
-        const body = document.querySelector('#form-body').value.trim();
-
-        console.log("FRONT-END DATA: ", title, body);
+        const body = document.querySelector('#form-body').value.trim();        
 
         const response = await fetch('/api/post', {
             method: 'POST',

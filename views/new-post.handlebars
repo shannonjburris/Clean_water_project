@@ -11,28 +11,25 @@
   </div>
   {{!-- post body --}}
   <div class="mb-3 for-group">
-    <label for="form-body" class="form-label">Body</label>
+    <label for="form-body" class="form-body">Body</label>
     <textarea
       class="form-control"
       id="form-body"
       rows="4"
-    ></textarea>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    ></textarea>    
   </div>
+  {{!-- image uploader --}}    
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" multiple>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload one or more files">
+        </div>
+      </div>
+          
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button> 
 </form>
-  {{!-- image uploader --}}
-  <form action="#">
-    <div class="file-field input-field">
-      <div class="btn">
-        <span>File</span>
-        <input type="file" multiple>
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder="Upload one or more files">
-      </div>
-    </div>
-  </form>
-        
-  <button type="submit" class="btn btn-primary">Submit</button>
-</div>
 <script src='/js/post-form.js'></script>

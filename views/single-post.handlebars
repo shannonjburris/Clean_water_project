@@ -2,16 +2,16 @@
   <div class="card-body">
     <div class="card-header">
       <h4 class="card-title">
-        {{title}}
+        {{plainPost.title}}
       </h4>
       <p class="card-text user-name">Created by
-        {{user.username}}
+        {{plainPost.user.username}}
         on
         {{!-- {{format_date createdAt}} remember to implement this helper function --}}
       </p>
     </div>
     <p class="card-text">
-      {{body}}
+      {{plainPost.body}}
     </p>
     <label form="new-comment" class="form-label">Comment:</label>
     <textarea
