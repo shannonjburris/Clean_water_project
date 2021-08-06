@@ -15,7 +15,7 @@
     </header>
     <nav class="navbar">
       <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
-      {{#if loggedIn}}
+      {{#if logged_in}}
         <a
           href="/dashboard"
           class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25"
@@ -38,11 +38,11 @@
       <div class="body-wrapper container">
         {{{body}}}
       </div>
-    </main>
-    <script src="/index.js"></script>
-    {{#if loggedIn}}
+    </main>    
+    {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
+    <script src="/js/scripts/js"></script>    
   </body>
 </html>
 

@@ -5,13 +5,16 @@ const seedPost = require('./post');
 const seedAlgae = require('../models/algae');
 
 const seedAll = async () =>{
-    await sequelize.sync({ force: true });
-
-    await seedUser();
-    await seedPost();
-    await seedComment();
-
-    process.exit(0);
+    try{
+        await sequelize.sync({ force: true });
+        await seedUser();
+        await seedPost();
+        await seedComment();
+        
+        process.exit(0);
+    }catch(error){
+        console.error(error);
+    }
 };
 
 seedAll();
