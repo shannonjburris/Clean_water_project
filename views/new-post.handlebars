@@ -1,9 +1,38 @@
-<div class="mb-3">
-  <label for="formControlTitle" class="form-label">Title</label>
-  <input type="text" class="form-control" id="formControlTitle" placeholder="Your Title ">
-</div>
-<div class="mb-3">
-  <label for="formControlTextarea1" class="form-label">Body</label>
-  <textarea class="form-control" id="formControlTextarea1" rows="3"></textarea>
+<form id="new-post-form" class="form">
+  <div class="mb-3 form-group">
+    {{!-- post title --}}
+    <label for="form-title" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="form-title"
+      placeholder="Your Title "
+    />
+  </div>
+  {{!-- post body --}}
+  <div class="mb-3 for-group">
+    <label for="form-body" class="form-label">Body</label>
+    <textarea
+      class="form-control"
+      id="form-body"
+      rows="4"
+    ></textarea>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+  {{!-- image uploader --}}
+  <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+  </form>
+        
   <button type="submit" class="btn btn-primary">Submit</button>
 </div>
+<script src='/js/post-form.js'></script>

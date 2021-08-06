@@ -1,16 +1,7 @@
 
-const createNewPost = async () =>{
+const redirectToForm = async () =>{
     location.replace('/dashboard/new')
 }
 
-
-
-
-
-
-
-
-
-
-document.getElementById('newpost')
-.addEventListener('click', createNewPost);
+const openForm = document.getElementById('newpost')
+.addEventListener('click', redirectToForm);

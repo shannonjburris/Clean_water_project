@@ -1,1 +1,26 @@
-s
+<div class="card text-decoration-none m-2 flex-row" style="width: 40rem;">
+  <div class="card-body">
+    <div class="card-header">
+      <h4 class="card-title">
+        {{title}}
+      </h4>
+      <p class="card-text user-name">Created by
+        {{user.username}}
+        on
+        {{!-- {{format_date createdAt}} remember to implement this helper function --}}
+      </p>
+    </div>
+    <p class="card-text">
+      {{body}}
+    </p>
+    <label form="new-comment" class="form-label">Comment:</label>
+    <textarea
+      class="form-control"
+      id="comment-form"
+      rows="4"
+    ></textarea>
+  </div>
+  <div>
+    <button class="btn-alert delete-button" id={{post.id}}>🗑️</button>
+  </div>  
+</div>
