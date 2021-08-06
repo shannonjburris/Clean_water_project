@@ -1,19 +1,41 @@
-const { Post } = require('../../models');
+const { Post , User, Comment} = require('../../models');
+const withAuth = require('../../utils/auth');
 
-const postRouter = require('express').Router();
+const router = require('express').Router();
 
+// get post by its Primary key
+router.get('/:id', async(req, res) =>{
+  try{    
+  
+    const getPostById = await Post.findByPk((req.params.id), {
+      include: [User]
+    })
+    
+    const plainPost = getPostById.get({ plain: true});
+    
+    // console.log(plainPost.id, plainPost.title, plainPost.body)
+    res.render('single-post', {
+      plainPost,    
+      logged_in: req.session.logged_in   
+    });
 
+  }catch(error){
+    res.status(500).json(error);
+  }
+})
 
 // I belive this is done and correct
 
-postRouter.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
+    console.log("HERE IS THE NEW POST DATA:", req.body);
+
     const postData = await Post.create({
-      title: req.body.title,
-      body: req.body.body,
-      user_id: req.body.user_id
+      ...req.body,
+      user_id: req.session.logged_in
     });
-    res.status(200).json(postData)
+
+    res.status(200).json(postData);    
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -21,7 +43,7 @@ postRouter.post('/', async (req, res) => {
 });
 
 
-postRouter.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.create({
       title: req.body.title,
@@ -39,7 +61,7 @@ postRouter.put('/:id', async (req, res) => {
 
 
 
-postRouter.delete('/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const postData = await Post.destroy({
       where: {
@@ -59,4 +81,4 @@ postRouter.delete('/:id', async (req, res) => {
   }
 });
 
-module.exports = postRouter;
+module.exports = router;

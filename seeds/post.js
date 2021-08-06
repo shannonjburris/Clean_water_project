@@ -9,12 +9,7 @@ const postData = [
     {
         title: 'algae is red and blue',
         body: 'what kind of algae is this',
-        user_id: 2
-    },
-    {
-        title: 'algae',
-        body: 'This is a lot about something about algae',
-        user_id: 4
+        user_id: 1
     },
     {
         title: 'my dog ate it',
