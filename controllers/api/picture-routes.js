@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const path = require('path');
 // id and key go here
-const access_id = "AKIAYFNZHDQTGQ3KXSFG";
-const access_key = "0/J4LD8v0U4JfAwAara2GEQLwGUG0Ze/CYDScY+Y";
+
 
 const aws = require('aws-sdk')
 const multer = require('multer')
