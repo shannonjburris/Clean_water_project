@@ -19,6 +19,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    location:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     upload: {
       type: DataTypes.STRING,
       allowNull: true,
