@@ -37,11 +37,11 @@
     <form class="form" id="comment-button">
       <label form="new-comment" class="form-label">Comment:</label>
       <textarea class="form-control" id="comment-form" rows="5"></textarea>
-      <button type="submit" class="btn">Submit New Comment</button>
+      <button type="submit" class="btn comment-submit" id={{plainPost.id}}>Submit New Comment</button>
     </form>
   </div>
   <div>
-    <button class="btn-alert delete-button" id={{post.id}}>🗑️</button>
+    <button class="btn-alert delete-button" id={{plainPost.id}}>🗑️</button>
   </div>
 </div>
 <script src="/js/comment.js"></script>
