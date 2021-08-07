@@ -10,13 +10,13 @@ const app = express()
 const s3 = new aws.S3({
   accessKeyId: access_id,
   secretAccessKey: access_key,
-  region: 'us-east-2'
+  region: 'us-east-1'
 })
 
 const upload = multer({
     storage: multerS3({
         s3: s3,
-        bucket: "cleanwater",
+        bucket: "clean-water-app",
         metadata: function (req, file, cb) {
             cb(null, { fieldName: file.fieldname });
         },
