@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/shannonjburris/Clean_water_project#readme",
   "dependencies": {
+    "aws-sdk": "^2.962.0",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^10.0.0",

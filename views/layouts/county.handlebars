@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="../../public/js/maps.js"></script>
+    <title>County Information</title>
+</head>
+ <h1>Algae in your county</h1>
+<body>
+    {{!-- map graphic --}}
+      <div class="row">
+    <div class="column">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <!-- this is where the map will go -->
+            <span class="card-title" id="card-title">Map graphic</span>
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALjN6cG-Hsi2pG8bFO32AvxrNW57olP3s&callback=initMap&libraries=&v=weekly"></script>
+</body>
+</html>
