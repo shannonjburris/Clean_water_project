@@ -1,16 +1,23 @@
-const commentRouter = require('express').Router();
-const {Comment} = require('../../models');
+const route = require('express').Router();
+const {Comment, Post, User} = require('../../models');
 
 // I belive this is done and correct
 
-commentRouter.post('/', async (req, res) => {
+route.post('/', async (req, res) => {
+    console.log(req.dataValues);
     try {
         const commentData = await Comment.create({
-            user_id: req.body.user_id,
+            user_id: req.session.user_id,
             body: req.body.body,
-            post_id: req.body.post_id
+            include:{
+              model: Post, 
+              attributes: ["id"]
+            }
+            
         });
-        res.status(200).json(commentData)
+        console.log(commentData)
+        res.status(200)
+
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -19,4 +26,4 @@ commentRouter.post('/', async (req, res) => {
 
 
 
-module.exports = commentRouter;
+module.exports = route;
