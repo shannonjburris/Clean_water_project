@@ -33,12 +33,12 @@ Algae.init(
             allowNull: true,
         },
         lat: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         lon: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         algae_type: {
             type: DataTypes.STRING,

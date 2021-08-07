@@ -20,8 +20,7 @@ router.get("/:id", async (req, res) => {
 
     const plainPost = getPostById.get({ plain: true });
     
-    // console.log(plainPost);
-
+    
     res.render("single-post", {
       plainPost,
       logged_in: req.session.logged_in,
@@ -40,6 +39,8 @@ router.post("/", withAuth, async (req, res) => {
       ...req.body,
       user_id: req.session.user_id,
     });
+
+    res.status(200).json(postData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -57,6 +58,7 @@ router.put("/:id", withAuth, async (req, res) => {
       },
       { where: { id: req.params.id } }
     );
+    res.status(200).json(postData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

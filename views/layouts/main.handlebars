@@ -16,19 +16,21 @@
   </header>
   <nav class="navbar">
     <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
+
     {{#if logged_in}}
     <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Dashboard</a>
-    <a href="../new-post.handlebars" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
-      Observation</a>
-       <a href="#" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+    <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
+      Observation</button>
+    <a href="#" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
       Algae by County</a>
-      <a href="../info.handlebars" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+    <a href="/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
       Algae Information</a>
-       <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
-    {{else}} 
-    <a href="../info.handlebars" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+    <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
+
+    {{else}}
+    <a href="/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
       Algae by County</a>
-       <a href="../info.handlebars" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+    <a href="/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
       Algae Information</a>
     <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3">
       <id id="login">Login</id>
@@ -47,7 +49,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
+  <script src="/js/scripts.js"></script>
 </body>
 
 </html>
