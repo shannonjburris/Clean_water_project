@@ -12,7 +12,7 @@ router.get("/", withAuth, async (req, res) => {
     });
 
     const posts = allPosts.map((posts) => posts.get({ plain: true }));
-
+    console.log(posts)
     res.render("dashboard", {
       posts,
       logged_in: req.session.logged_in,
