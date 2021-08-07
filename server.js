@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection')
 const helpers = require('./utils/auth')
+const Handlebars = require('handlebars')
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -28,6 +29,7 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+Handlebars.registerPartial('comment','{{comment}}');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

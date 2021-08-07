@@ -22,3 +22,4 @@ const submitNewPostForm = async (event) => {
 }
 const submitForm = document.getElementById('new-post-form').
 addEventListener('submit', submitNewPostForm);
+
