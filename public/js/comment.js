@@ -11,7 +11,8 @@ const submitCommentForm = async (event) =>{
     })
 
     if(response.ok){
-        document.location.replace('/dashboard');
+        document.location.reload();
+        console.log('Comment Added');
     }else{
         alert(response.statusText);
     }

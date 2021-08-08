@@ -17,7 +17,7 @@ const submitNewPostForm = async (event) => {
         if(response.ok){
             console.log("Post Created");
             // if the post is created the user is sent back to his dashboard
-            document.location.replace('/dashboard');
+            document.location.reload();
         }else{
             alert(response.statusText);
         }
