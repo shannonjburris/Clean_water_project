@@ -29,6 +29,18 @@ router.get("/new", withAuth, (req, res) => {
   });
 });
 
+router.get("/county", (req, res) => {
+  res.render("county",{
+    logged_in: req.session.logged_in
+  });
+});
+
+router.get("/info", (req, res) => {
+  res.render("info",{
+    logged_in: req.session.logged_in
+  });
+});
+
 // implement update post
 
 // implement delete post

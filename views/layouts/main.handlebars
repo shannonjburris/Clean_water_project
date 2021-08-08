@@ -7,42 +7,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/assets/style.css" />
+  <script src="/js/maps.js"></script>
   <title>Clean Water Project</title>
 </head>
 
 <body>
   <header>
-    <h1 class="text-center my-3">Welcome! Become an Algae Buster Today!</h1>
+    <div class="container">
+      <h1 class="text-center my-3">Welcome! Become an Algae Buster Today!</h1>
+    </div>
   </header>
   <nav class="navbar">
-    <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
+    <div class="container">
+      <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
 
-    {{#if logged_in}}
-    <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Dashboard</a>
-    <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
-      Observation</button>
-    <a href="#" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-      Algae by County</a>
-    <a href="/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-      Algae Information</a>
-    <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
+      {{#if logged_in}}
+      <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Dashboard</a>
+      <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
+        Observation</button>
+      <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+        Algae by County</a>
+      <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+        Algae Information</a>
+      <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
 
-    {{else}}
-    <a href="/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-      Algae by County</a>
-    <a href="/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-      Algae Information</a>
-    <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3">
-      <id id="login">Login</id>
-    </a>
-    <a href="/signup" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-      <id id="signup">Sign up</id>
-    </a>
+      {{else}}
+      <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+        Algae by County</a>
+      <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+        Algae Information</a>
+      <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3">
+        <id id="login">Login</id>
+      </a>
+      <a href="/signup" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+        <id id="signup">Sign up</id>
+      </a>
 
-    {{/if}}
+      {{/if}}
+    </div>
   </nav>
   <main>
-    <div class="body-wrapper container">
+    <div class="body-wrapper">
       {{{body}}}
     </div>
   </main>
@@ -50,6 +55,7 @@
   <script src="/js/logout.js"></script>
   {{/if}}
   <script src="/js/scripts.js"></script>
+  <script src="/js/county.js"></script>
 </body>
 
 </html>
