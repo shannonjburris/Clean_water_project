@@ -7,9 +7,9 @@
   }
 
 
-*{
+/* * {
     margin: 0 auto;
-}
+} */
 
 html{
     background: linear-gradient(0.25turn, var(--complimentary), var(--complimentary2), var(--secondary));
@@ -32,4 +32,35 @@ label{
     background-color: #f4f4f4;
     padding: 2rem;
     margin-top: 2rem;
+}
+
+.results-card {
+    padding: 2rem;
+}
+
+.results {
+    display: flex;
+    /* override materialize's negative margins */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 1rem 0;
+    min-height: 75px;
+}
+
+.results:nth-child(even) {
+    background-color: lightgray;
+}
+
+.search-result {
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.search-result.heading {
+    width: 100px;
+    min-width: 100px;
+}
+
+.comments {
+    visibility: hidden;
 }
