@@ -4,7 +4,7 @@
     <div class="col s12">
       <div class="card">
         <div class="card-content">
-          <span class="card-title">Algae by County</span>
+          <span class="card-title">Search by County</span>
           <div class="row">
             <form id="county-search">
               <div class="input-field col s6">
@@ -37,7 +37,7 @@
                   <option value="Hendry">Hendry</option>
                   <option value="Hernando">Hernando</option>
                   <option value="Highlands">Highlands</option>
-                  <option value="Hillborough">Hillsborough</option>
+                  <option value="Hillsborough">Hillsborough</option>
                   <option value="Holmes">Holmes</option>
                   <option value="Indian">Indian River</option>
                   <option value="Jackson">Jackson</option>
@@ -81,12 +81,6 @@
               </div>
               <div class="col">
                 <label>
-                  <input type="checkbox" id="micro" />
-                  <span>Microcystin</span>
-                </label>
-              </div>
-              <div class="col">
-                <label>
                   <input type="checkbox" id="algae-observed" />
                   <span>Algae Observed</span>
                 </label>
@@ -96,15 +90,39 @@
           </div>
           <div class="row">
             <div class="column">
-              <div class="col s12">
+              <div class="col s12 m6">
                 <div class="card">
                   <div class="card-image">
-                    <!-- this is where the map will go -->
-                    <span class="card-title" id="card-title">Map graphic</span>
                     <!--The div element for the map -->
                     <div id="map"></div>
                     <script
                       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALjN6cG-Hsi2pG8bFO32AvxrNW57olP3s&callback=initMap&libraries=&v=weekly"></script>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card results-card">
+                  <div class="card-image"></div>
+                  <h3 class="darken-4">Information</h3>
+                  <div class="row results">
+                    <div class="search-result heading">Location:</div>
+                    <div class="location search-result" id="algae-location"></div>
+                  </div>
+                  <div class="row results">
+                    <div class="search-result heading">Date Observed:</div>
+                    <div class="location search-result" id="algae-date"></div>
+                  </div>
+                  <div class="row results">
+                    <div class="search-result heading">Algae Observed:</div>
+                    <div class="search-result" id="algae-result"></div>
+                  </div>
+                  <div class="row results">
+                    <div class="search-result heading">Algae Type:</div>
+                    <div class="search-result" id="algae-type"></div>
+                  </div>
+                  <div class="row results comments">
+                    <div class="search-result heading">Comments:</div>
+                    <div class="search-result" id="algae-comments"></div>
                   </div>
                 </div>
               </div>
