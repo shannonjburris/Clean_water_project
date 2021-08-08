@@ -23,3 +23,13 @@ label{
 .form-title{
     background: red;
 }
+
+#map {
+    height: 400px;
+}
+
+#new-post-form {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin-top: 2rem;
+}
