@@ -1,116 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css" />
-  <script src="/js/maps.js"></script>
-  <title>Clean Water Project</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="/js/maps.js"></script>
+    <title>Clean Water Project</title>
+  </head>
 
-<body>
-  <header>
-    <div class="header" id="banner">
-      <h3>The Clean Water Project</h3>
-    </div>
-  <nav class="navbar">
-    <div class="container">
-      <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
+  <body>
+    <header>
+      <div class="header" id="banner">
+        <h3>The Clean Water Project</h3>
+      </div>
+      <nav class="navbar">
+        <div class="container">
+          <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
 
-      {{#if logged_in}}
-      <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 btn">Dashboard</a>
-      <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
-        Observation</button>
-      <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-        Algae by County</a>
-      <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-        Algae Information</a>
-      <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
-
-        {{#if logged_in}}
-        <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 btn">Dashboard</a>
-        <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
-          Observation</button>
-        <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-          Algae by County</a>
-        <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-          Algae Information</a>
-        <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
-
-        {{else}}
-        <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-          Algae by County</a>
-        <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-          Algae Information</a>
-        <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3">
-          <id id="login">Login</id>
-        </a>
-        <a href="/signup" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-          <id id="signup">Sign up</id>
-        </a>
-  
-  {{/if}}
-  </div>
-  </nav>
-  </header>
-  <main>
-    <div class="body-wrapper">
-      {{{body}}}
-    </div>
-  </main>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-
-  <footer class="page-footer footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text-underline">Additional Information</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3"
-                href="https://protectingfloridatogether.gov/education-center/blue-green-algae">Protecting Florida
-                Together</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://oceanservice.noaa.gov/hazards/hab/">Harmful Algal
-                Blooms</a></li>
-
-          </ul>
-          <p class="grey-text text-lighten-4"></p>
+          {{#if logged_in}}
+          <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 btn">Dashboard</a>
+          <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
+            Observation</button>
+          <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+            Algae by County</a>
+          <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+            Algae Information</a>
+          <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>        
+          {{else}}
+          <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+            Algae by County</a>
+          <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+            Algae Information</a>
+          <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3">
+            <id id="login">Login</id>
+          </a>
+          <a href="/signup" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+            <id id="signup">Sign up</id>
+          </a>
+          {{/if}}
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Github</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="Shannon's GitHub">Shannon</a></li>
-            <li><a class="grey-text text-lighten-3" href="Romulo's GitHub">Romulo</a></li>
-            <li><a class="grey-text text-lighten-3" href="McKinley's Github">McKinley</a></li>
-            <li><a class="grey-text text-lighten-3" href="Todd's Github ">Todd</a></li>
-          </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="body-wrapper">
+        {{{body}}}
+      </div>
+    </main>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+    <footer class="page-footer footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text-underline">Additional Information</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3"
+                  href="https://protectingfloridatogether.gov/education-center/blue-green-algae">Protecting Florida
+                  Together</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://oceanservice.noaa.gov/hazards/hab/">Harmful Algal
+                  Blooms</a></li>
+
+            </ul>
+            <p class="grey-text text-lighten-4"></p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Github</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="Shannon's GitHub">Shannon</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://github.com/krooksoma">Romulo</a></li>
+              <li><a class="grey-text text-lighten-3" href="McKinley's Github">McKinley</a></li>
+              <li><a class="grey-text text-lighten-3" href="Todd's Github ">Todd</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container center-align">
-        © 2021 The Clean Water Project
+      <div class="footer-copyright">
+        <div class="container center-align">
+          © 2021 The Clean Water Project
 
+        </div>
       </div>
-    </div>
-  </footer>
+      
+    </footer>
 
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <script src="js/materialize.js"></script>
-
-
-  <script src="/js/scripts.js"></script>
-  <script src="/js/county.js"></script>
-</body>
-
-
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <script src="/js/scripts.js"></script>
+    <script src="/js/county.js"></script>
+  </body>
 
 </html>
