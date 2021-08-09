@@ -1,9 +1,9 @@
 :root{
-    --primary: #192E59;
-  --secondary: #455473;
-  --tertiary: #8090A6;
-  --complimentary: #BFA399;
-  --complimentary2: #8C7570;
+   --primary: #F2F2F2;
+  --secondary: #30618C;
+  --tertiary: #368ABF;
+  --complimentary: #B6DBF2;
+  --complimentary2: #182226;
   }
 
 
@@ -12,7 +12,7 @@
 } */
 
 html{
-    background: linear-gradient(0.25turn, var(--complimentary), var(--complimentary2), var(--secondary));
+    background-color: var(--primary);
 }
 
 label{
@@ -20,8 +20,26 @@ label{
     font-size: 120%;
 }
 
+#logo{
+    margin-left: 25%;
+}
+
 .form-title{
     background: red;
+}
+
+.navbar{
+    background-color: var(--secondary);
+    
+}
+
+.card-body{
+    margin-left: 30%;
+}
+
+.btn {
+    background-color: var(--complimentary);
+    border-radius: 5px solid var(--tertiary);
 }
 
 #map {
