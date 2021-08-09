@@ -26,7 +26,6 @@ Algae.init(
         algae_observed: {
             type: DataTypes.STRING,
             allowNull: false,
-
         },
         comments:{
             type: DataTypes.STRING,
