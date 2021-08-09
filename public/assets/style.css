@@ -10,6 +10,11 @@
 /* * {
     margin: 0 auto;
 } */
+#custom-header{
+    background-image: url(/public/assets/images/FloridaRockSpringsPhoto.jpg);
+    width: 100%;   
+    margin: 0; 
+}
 
 html{
     background-color: var(--primary);
