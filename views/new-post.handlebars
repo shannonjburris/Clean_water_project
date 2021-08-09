@@ -1,9 +1,10 @@
 <div class="container">
-<form id="new-post-form" class="form">
+<form id="new-post-form" class="form" method="POST" action="/api/post"enctype="multipart/form-data">
   <div class="mb-3 form-group">
     {{!-- post title --}}
     <label for="form-title" class="form-label">Title</label>
     <input
+      name="title"
       type="text"
       class="form-control"
       id="form-title"
@@ -13,7 +14,7 @@
  {{!-- drop down for counties --}}
 <div class="row">
     <div class="input-field col s6">
-        <select class="browser-default" id="dropdown">
+        <select class="browser-default" id="dropdown" name="location">
             <option value="" disabled selected>Please Select County of Algae Observation</option>
             <option value="Alachua">Alachua</option>
             <option value="Baker">Baker</option>
@@ -89,6 +90,7 @@
   <div class="mb-3 for-group">
     <label for="form-body" class="form-body">Body</label>
     <textarea
+      name="body"
       class="form-control"
       id="form-body"
       rows="4"
@@ -98,7 +100,7 @@
       <div class="file-field input-field">
         <div class="btn">
           <span>File</span>
-          <input type="file" multiple>
+          <input type="file" id="photo" name="photo">
         </div>
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text" placeholder="Upload one or more files">
@@ -107,4 +109,4 @@
   <button type="submit" class="btn btn-primary">Submit</button> 
 </form>
 </div>
-<script src='/js/post-form.js'></script>
+{{!-- I took out the fetch for this form  --}}

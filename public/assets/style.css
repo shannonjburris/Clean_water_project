@@ -64,3 +64,7 @@ label{
 .comments {
     visibility: hidden;
 }
+
+.card {
+    padding: 2rem;
+}

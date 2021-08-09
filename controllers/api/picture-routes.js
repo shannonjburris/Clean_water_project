@@ -8,8 +8,8 @@ const multer = require('multer')
 const multerS3 = require('multer-s3')
 const app = express()
 const s3 = new aws.S3({
-  accessKeyId: access_id,
-  secretAccessKey: access_key,
+  accessKeyId: 'AKIAYFNZHDQTPQSCEKPV',
+  secretAccessKey: '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',
   region: 'us-east-1'
 })
 

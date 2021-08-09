@@ -6,11 +6,17 @@ const submitNewPostForm = async (event) => {
         const title = document.querySelector('#form-title').value.trim();
         const body = document.querySelector('#form-body').value.trim();   
         const location = document.querySelector('#dropdown').value;
+        let photo = document.getElementById("photo").files[0];
              
-
+        const form = new FormData()
+        form.append('title', title)
+        form.append('location', location)
+        form.append('body', body)
+        form.append('image', photo)
+        //Trying to pass the file in the body??
         const response = await fetch('/api/post', {
             method: 'POST',
-            body: JSON.stringify({title, body, location}),
+            body: form,
             headers: { 'Content-Type' : 'application/json'}
         });
 
@@ -26,4 +32,3 @@ const submitNewPostForm = async (event) => {
 }
 const submitForm = document.getElementById('new-post-form').
 addEventListener('submit', submitNewPostForm);
-
