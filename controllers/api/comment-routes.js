@@ -15,12 +15,7 @@ route.post('/:id', async (req, res) => {
               attributes: 'username'
             }            
         });
-<<<<<<< HEAD
-        console.log(commentData);
-        res.status(200).json(commentData);
-=======
         res.status(200)
->>>>>>> c04826e8c3606db125698145ddd22ff8890b305b
 
     } catch (err) {
       res.status(500).json(err);
