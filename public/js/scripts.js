@@ -22,7 +22,6 @@ const deletePost = async (event) => {
 const openForm = document.getElementById('newpost')
 .addEventListener('click', redirectToForm);
 
-console.log(document.querySelector('.delete-button'));
 document.querySelectorAll('.delete-button').forEach(item => {
     item.addEventListener('click', (event) => deletePost(event));
 })

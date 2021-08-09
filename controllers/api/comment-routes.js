@@ -1,4 +1,4 @@
-const route = require('express').Router();
+const route                 = require('express').Router();
 const {Comment, Post, User} = require('../../models');
 
 // I belive this is done and correct
@@ -12,11 +12,9 @@ route.post('/:id', async (req, res) => {
             post_id: req.params.id
             
         });
-        console.log(commentData);
         res.status(200)
 
     } catch (err) {
-      console.log(err);
       res.status(500).json(err);
     }
   });

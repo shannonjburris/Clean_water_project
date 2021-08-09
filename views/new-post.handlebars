@@ -1,112 +1,101 @@
 <div class="container">
-<form id="new-post-form" class="form" method="POST" action="/api/post"enctype="multipart/form-data">
-  <div class="mb-3 form-group">
-    {{!-- post title --}}
-    <label for="form-title" class="form-label">Title</label>
-    <input
-      name="title"
-      type="text"
-      class="form-control"
-      id="form-title"
-      placeholder="Your Title "
-    />
-  </div>
- {{!-- drop down for counties --}}
-<div class="row">
-    <div class="input-field col s6">
+  <form id="new-post-form" class="form" method="POST" action="/api/post" enctype="multipart/form-data">
+    <div class="mb-3 form-group">
+      {{!-- post title --}}
+      <label for="form-title" class="form-label">Title</label>
+      <input name="title" type="text" class="form-control" id="form-title" placeholder="Your Title " />
+    </div>
+    {{!-- drop down for counties --}}
+    <div class="row">
+      <div class="input-field col s6">
         <select class="browser-default" id="dropdown" name="location">
-            <option value="" disabled selected>Please Select County of Algae Observation</option>
-            <option value="Alachua">Alachua</option>
-            <option value="Baker">Baker</option>
-            <option value="Bay">Bay</option>
-            <option value="Bradford">Bradford</option>
-            <option value="Brevard">Brevard</option>
-            <option value="Broward">Broward</option>
-            <option value="Calhoun">Calhoun</option>
-            <option value="Charlotte">Charlotte</option>
-            <option value="Citrus">Citrus</option>
-            <option value="Clay">Clay</option>
-            <option value="Collier">Collier</option>
-            <option value="Columbia">Columbia</option>
-            <option value="Desoto">Desoto</option>
-            <option value="Dixie">Dixie</option>
-            <option value="Duval">Duval</option>
-            <option value="Escambia">Escambia</option>
-            <option value="Flagger">Flagger</option>
-            <option value="Franklin">Franklin</option>
-            <option value="Gadsden">Gadsden</option>
-            <option value="Gilchrist">Gilchrist</option>
-            <option value="Glades">Glades</option>
-            <option value="Gulf">Gulf</option>
-            <option value="Hamilton">Hamilton</option>
-            <option value="Hardee">Hardee</option>
-            <option value="Hendry">Hendry</option>
-            <option value="Hernando">Hernando</option>
-            <option value="Highlands">Highlands</option>
-            <option value="Hillborough">Hillsborough</option>
-            <option value="Holmes">Holmes</option>
-            <option value="Indian">Indian River</option>
-            <option value="Jackson">Jackson</option>
-            <option value="Jefferson">Jefferson</option>
-            <option value="Lafayette">Lafayette</option>
-            <option value="Lake">Lake</option>
-            <option value="Lee">Lee</option>
-            <option value="Leon">Leon</option>
-            <option value="Levy">Levy</option>
-            <option value="Liberty">Liberty</option>
-            <option value="Madison">Madison</option>
-            <option value="Manatee">Manatee</option>
-            <option value="Marion">Marion</option>
-            <option value="Martin">Martin</option>
-            <option value="Miami-Dade">Miami-Dade</option>
-            <option value="Monroe">Monroe</option>
-            <option value="Nassau">Nassau</option>
-            <option value="Okaloosa">Okaloosa</option>
-            <option value="Okechobee">Okeechobee</option>
-            <option value="Orange">Orange</option>
-            <option value="Osceola">Osceola</option>
-            <option value="Palm Beach">Palm Beach</option>
-            <option value="Pasco">Pasco</option>
-            <option value="Pinellas">Pinellas</option>
-            <option value="Polk">Polk</option>
-            <option value="Putnam">Putnam</option>
-            <option value="St. Johns">St. Johns</option>
-            <option value="St. Lucie">St. Lucie</option>
-            <option value="Santa Rosa">Santa Rosa</option>
-            <option value="Sarasota">Sarasota</option>
-            <option value="Seminole">Seminole</option>
-            <option value="Sumter">Sumter</option>
-            <option value="Suwanee">Suwannee</option>
-            <option value="Taylor">Taylor</option>
-            <option value="Union">Union</option>
-            <option value="Volusia">Volusia</option>
-            <option value="Walkulla">Walkulla</option>
-            <option value="Walton">Walton</option>
-            <option value="Washington">Washington</option>  
+          <option value="" disabled selected>Please Select County of Algae Observation</option>
+          <option value="Alachua">Alachua</option>
+          <option value="Baker">Baker</option>
+          <option value="Bay">Bay</option>
+          <option value="Bradford">Bradford</option>
+          <option value="Brevard">Brevard</option>
+          <option value="Broward">Broward</option>
+          <option value="Calhoun">Calhoun</option>
+          <option value="Charlotte">Charlotte</option>
+          <option value="Citrus">Citrus</option>
+          <option value="Clay">Clay</option>
+          <option value="Collier">Collier</option>
+          <option value="Columbia">Columbia</option>
+          <option value="Desoto">Desoto</option>
+          <option value="Dixie">Dixie</option>
+          <option value="Duval">Duval</option>
+          <option value="Escambia">Escambia</option>
+          <option value="Flagger">Flagger</option>
+          <option value="Franklin">Franklin</option>
+          <option value="Gadsden">Gadsden</option>
+          <option value="Gilchrist">Gilchrist</option>
+          <option value="Glades">Glades</option>
+          <option value="Gulf">Gulf</option>
+          <option value="Hamilton">Hamilton</option>
+          <option value="Hardee">Hardee</option>
+          <option value="Hendry">Hendry</option>
+          <option value="Hernando">Hernando</option>
+          <option value="Highlands">Highlands</option>
+          <option value="Hillborough">Hillsborough</option>
+          <option value="Holmes">Holmes</option>
+          <option value="Indian">Indian River</option>
+          <option value="Jackson">Jackson</option>
+          <option value="Jefferson">Jefferson</option>
+          <option value="Lafayette">Lafayette</option>
+          <option value="Lake">Lake</option>
+          <option value="Lee">Lee</option>
+          <option value="Leon">Leon</option>
+          <option value="Levy">Levy</option>
+          <option value="Liberty">Liberty</option>
+          <option value="Madison">Madison</option>
+          <option value="Manatee">Manatee</option>
+          <option value="Marion">Marion</option>
+          <option value="Martin">Martin</option>
+          <option value="Miami-Dade">Miami-Dade</option>
+          <option value="Monroe">Monroe</option>
+          <option value="Nassau">Nassau</option>
+          <option value="Okaloosa">Okaloosa</option>
+          <option value="Okechobee">Okeechobee</option>
+          <option value="Orange">Orange</option>
+          <option value="Osceola">Osceola</option>
+          <option value="Palm Beach">Palm Beach</option>
+          <option value="Pasco">Pasco</option>
+          <option value="Pinellas">Pinellas</option>
+          <option value="Polk">Polk</option>
+          <option value="Putnam">Putnam</option>
+          <option value="St. Johns">St. Johns</option>
+          <option value="St. Lucie">St. Lucie</option>
+          <option value="Santa Rosa">Santa Rosa</option>
+          <option value="Sarasota">Sarasota</option>
+          <option value="Seminole">Seminole</option>
+          <option value="Sumter">Sumter</option>
+          <option value="Suwanee">Suwannee</option>
+          <option value="Taylor">Taylor</option>
+          <option value="Union">Union</option>
+          <option value="Volusia">Volusia</option>
+          <option value="Walkulla">Walkulla</option>
+          <option value="Walton">Walton</option>
+          <option value="Washington">Washington</option>
         </select>
-    </div>    
-</div>
-  {{!-- post body --}}
-  <div class="mb-3 for-group">
-    <label for="form-body" class="form-body">Body</label>
-    <textarea
-      name="body"
-      class="form-control"
-      id="form-body"
-      rows="4"
-    ></textarea>    
-  </div>
-  {{!-- image uploader --}}    
-      <div class="file-field input-field">
-        <div class="btn">
-          <span>File</span>
-          <input type="file" id="photo" name="photo">
-        </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text" placeholder="Upload one or more files">
-        </div>
       </div>
-  <button type="submit" class="btn btn-primary">Submit</button> 
-</form>
+    </div>
+    {{!-- post body --}}
+    <div class="mb-3 for-group">
+      <label for="form-body" class="form-body">Body</label>
+      <textarea name="body" class="form-control" id="form-body" rows="4"></textarea>
+    </div>
+    {{!-- image uploader --}}
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" id="photo" name="photo">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
-{{!-- I took out the fetch for this form  --}}
+{{!-- I took out the fetch for this form --}}
