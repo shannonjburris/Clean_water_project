@@ -15,77 +15,92 @@
 <body>
   <header>
     <div class="container">
-      
-      <div id="logo"><img src="/assets/images/logo.png" alt="logo"></div>
+
+      {{!-- <div id="logo"><img src="/assets/images/logo.jpg" alt="logo"></div> --}}
     </div>
   </header>
-  <nav class="navbar">
-    <div class="container">
-      <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
+  <nav>
+    <nav>
+      <div class="nav-wrapper light blue" style="padding: 0px 10px;">
+        <a href="/home" class="brand-logo"><i class="material-icons">invert_colors</i>The Clean Water Project</a>
+        <a href="#" data-activates="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-      {{#if logged_in}}
-      <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 btn">Dashboard</a>
-      <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
-        Observation</button>
-      <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-        Algae by County</a>
-      <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
-        Algae Information</a>
-      <button class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3" id="logout">Logout</button>
-
+        {{!-- <a class="wave-effect blue" href="/home">Home</a> --}}
+        <ul class="right hide-on-med-and-down">
+          {{#if logged_in}}
+          <li><a href="/dashboard" class="wave-effect blue ">Dashboard</a></li>
+          <button id="newpost" class="btn wave-effect blue">Make an
+            Observation</button>
+          <a href="/dashboard/county" class="btn wave-effect blue">
+            Algae by County</a>
+          <a href="/dashboard/info" class="btn wave-effect blue">
+            Algae Information</a>
+          <button class="btn wave-effect blue" id="logout">Logout</button>
+        </ul>
+      </div>
       {{else}}
-      <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+      <a href="/dashboard/county" class="wave-effect blue">
         Algae by County</a>
-      <a href="/dashboard/info" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+      <a href="/dashboard/info" class="wave-effect blue">
         Algae Information</a>
-      <a href="/login" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 me-3">
+      <a href="/login" class="wave-effect blue">
         <id id="login">Login</id>
       </a>
-      <a href="/signup" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
+      <a href="/signup" class= "wave-effect blue">
         <id id="signup">Sign up</id>
       </a>
 
       {{/if}}
-    </div>
-  </nav>
-  <main>
-    <div class="body-wrapper">
-      {{{body}}}
-    </div>
-  </main>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  <script src="/js/scripts.js"></script>
-  <script src="/js/county.js"></script>
+      </div>
+    </nav>
+    <main>
+      <div class="body-wrapper">
+        {{{body}}}
+      </div>
+    </main>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+     <footer class="page-footer blue">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text-underline">Additional Information</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://protectingfloridatogether.gov/education-center/blue-green-algae">Protecting Florida Together</a></li>
+                  {{!-- <li><a class="grey-text text-lighten-3" href="Romulo's GitHub">Romulo</a></li> --}}
+
+                </ul>
+                <p class="grey-text text-lighten-4"></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Github</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="Shannon's GitHub">Shannon</a></li>
+                  <li><a class="grey-text text-lighten-3" href="Romulo's GitHub">Romulo</a></li>
+                  <li><a class="grey-text text-lighten-3" href="McKinley's Github">McKinley</a></li>
+                  <li><a class="grey-text text-lighten-3" href="Todd's Github ">Todd</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright blue">
+            <div class="container center-align">
+            © 2021 The Clean Water Project
+           
+            </div>
+          </div>
+        </footer>
+            
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="js/materialize.js"></script>
+
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/county.js"></script>
 </body>
 
 </html>
-
-
-{{!--
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
-<nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i
-            class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
-  </div>
-</nav>
-
-To activate the dropdown menu, insert this line of code into your JavaScript file, within the $( document
-).ready(function) block
-
-
-$(".dropdown-trigger").dropdown(); --}}
