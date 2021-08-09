@@ -1,13 +1,13 @@
-const submitCommentForm = async (event) =>{
+const submitCommentForm = async (event) => {
     event.preventDefault();
 
     const body = document.querySelector('#comment-form').value.trim();
-    const id   = document.querySelector('.comment-submit').getAttribute('id');
-    
+    const id = document.querySelector('.comment-submit').getAttribute('id');
+
     const response = await fetch('/api/comment/' + id, {
         method: 'POST',
-        body: JSON.stringify({body}),
-        headers: { 'Content-Type' : 'application/json' }
+        body: JSON.stringify({ body }),
+        headers: { 'Content-Type': 'application/json' }
     })
 
     if (response.ok) {
@@ -22,4 +22,4 @@ const submitCommentForm = async (event) =>{
 
 
 const submitComment = document.getElementById('comment-button').
-addEventListener('submit', submitCommentForm)
+    addEventListener('submit', submitCommentForm)

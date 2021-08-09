@@ -1,5 +1,9 @@
-{{#each posts as |post| }}
+<div class="container">
+  {{#each posts as |post| }}
   <div class="card text-decoration-none m-2 flex-row" style="width: 40rem;">
+    <div class="card-image">
+      <img src="{{post.upload}}" alt="">
+    </div>
     <div class="card-body" id={{post.id}}>
       <div class="card-header">
         <a href="/api/post/{{post.id}}" class="card-title text-decoration-none">
@@ -8,23 +12,16 @@
         <p class="card-text user-name">Created by
           {{user.username}}
           on
-          {{!-- {{format_date createdAt}} remember to implement this helper function --}}
-          </p>
+        </p>
       </div>
       <p class="card-text">
         {{body}}
       </p>
     </div>
-      <div>
-        <button class="btn-alert delete-button" id={{post.id}}>🗑️</button>
-      </div>
+    <div>
+      <button class="btn-alert delete-button" id={{post.id}}>🗑️</button>
+    </div>
   </div>
-{{/each}}
-{{!-- <div class="container-fluid justify-content-center m-4">
-  <button
-    id="newpost"
-    class="btn btn-primary fixed-bottom"
-    style="width: 20rem;"
-  >New Post</button>
-</div> --}}
-<script src="/js/scripts.js"></script>
+  {{/each}}
+  <script src="/js/scripts.js"></script>
+</div>
