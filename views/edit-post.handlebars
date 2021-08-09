@@ -1,1 +1,46 @@
-s
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Algae</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <h1 class="header center blue-text">Edit Post</h1>
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Post: {{postInfo.title}}</span>
+              <label class="mdc-text-field mdc-text-field--textarea">
+                <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__notch">
+                    <span class="mdc-floating-label" id="my-label-id"></span>
+                </span>
+                <span class="mdc-notched-outline__trailing"></span>
+                </span>
+                <span class="mdc-text-field__resizer">
+                <textarea class="mdc-text-field__input" aria-labelledby="my-label-id" rows="8"
+                    cols="40" maxlength="3000">{{postInfo.body}}</textarea>
+                </span>
+            </label>
+            </div>
+            <div class="card-action">
+              <a href="#">Submit</a>
+              <a href="#">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="/js/edit-post.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  </body>
+</html>
