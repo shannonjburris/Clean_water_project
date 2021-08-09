@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 const seedUser= require ('./user');
 const seedComment = require('./comment');
 const seedPost = require('./post');
-const seedAlgae = require('../models/algae');
+const seedAlgae = require('./algae');
 
 const seedAll = async () =>{
     try{
@@ -10,6 +10,7 @@ const seedAll = async () =>{
         await seedUser();
         await seedPost();
         await seedComment();
+        await seedAlgae();
         
         process.exit(0);
     }catch(error){

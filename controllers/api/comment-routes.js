@@ -9,8 +9,11 @@ route.post('/:id', async (req, res) => {
         const commentData = await Comment.create({
             user_id: req.session.user_id,
             body: req.body.body,
-            post_id: req.params.id
-            
+            post_id: req.params.id, 
+            include: {
+              model: User, 
+              attributes: 'username'
+            }            
         });
         res.status(200)
 

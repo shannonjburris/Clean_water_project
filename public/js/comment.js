@@ -10,9 +10,10 @@ const submitCommentForm = async (event) => {
         headers: { 'Content-Type': 'application/json' }
     })
 
-    if (response.ok) {
-        document.location.replace('/dashboard');
-    } else {
+    if(response.ok){
+        document.location.reload();
+        // console.log('Comment Added');
+    }else{
         alert(response.statusText);
     }
 

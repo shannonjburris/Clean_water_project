@@ -1,10 +1,10 @@
 <div class="container">
   {{#each posts as |post| }}
-  <div class="card text-decoration-none m-2 flex-row" style="width: 40rem;">
+  <div class="card text-decoration-none m-2 flex-row" style="width: 60rem;">
+    <div class="card-body row" id={{post.id}}>
     <div class="card-image">
       <img src="{{post.upload}}" alt="">
     </div>
-    <div class="card-body" id={{post.id}}>
       <div class="card-header">
         <a href="/api/post/{{post.id}}" class="card-title text-decoration-none">
           {{title}}
@@ -18,8 +18,11 @@
         {{body}}
       </p>
     </div>
+    {{!-- delete button on dashboard --}}
     <div>
-      <button class="btn-alert delete-button" id={{post.id}}>🗑️</button>
+      <button class="btn-alert delete-button" id={{post.id}}>
+        <span class="material-icons">delete_outline</span>
+      </button>
     </div>
   </div>
   {{/each}}
