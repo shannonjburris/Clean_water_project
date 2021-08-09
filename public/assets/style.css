@@ -86,3 +86,7 @@ label{
 .card {
     padding: 2rem;
 }
+
+.footer {
+    background-color: var(--secondary);
+}
