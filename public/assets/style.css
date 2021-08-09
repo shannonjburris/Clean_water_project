@@ -15,6 +15,23 @@ html{
     background-color: var(--primary);
 }
 
+.header{
+    background-image: url(../assets/images/FloridaRockSpringsPhoto.jpg) ;
+    height: 300px;
+    color: white;
+    padding: 2rem;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    
+}
+
+.header h3{
+    background-color: var(--secondary);
+    padding: 2rem;
+    width: min-content;
+}
+
+
 label{
     color: black;
     font-size: 120%;
@@ -89,4 +106,5 @@ label{
 
 .footer {
     background-color: var(--secondary);
+
 }
