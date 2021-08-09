@@ -14,7 +14,8 @@
 <body>
   <header>
     <div class="container">
-      <h1 class="text-center my-3">Welcome! Become an Algae Buster Today!</h1>
+      
+      <div id="logo"><img src="/assets/images/logo.png" alt="logo"></div>
     </div>
   </header>
   <nav class="navbar">
@@ -22,7 +23,7 @@
       <a class="nav-item waves-effect waves-light btn btn-success p-2 w-25 ms-3" href="/">Home</a>
 
       {{#if logged_in}}
-      <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Dashboard</a>
+      <a href="/dashboard" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25 btn">Dashboard</a>
       <button id="newpost" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">Make an
         Observation</button>
       <a href="/dashboard/county" class="nav-item waves-effect waves-light btn btn-secondary p-2 w-25">
