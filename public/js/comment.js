@@ -12,7 +12,7 @@ const submitCommentForm = async (event) =>{
 
     if(response.ok){
         document.location.reload();
-        console.log('Comment Added');
+        // console.log('Comment Added');
     }else{
         alert(response.statusText);
     }

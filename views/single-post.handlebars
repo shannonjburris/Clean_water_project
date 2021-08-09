@@ -18,7 +18,7 @@
     {{#if plainPost.comments}}
     <div class="card">
       <div class="card-header">
-        {{!-- Get rid of this comments header --}}
+        {{!-- Get rid of this comments header on finished site --}}
         <h4>Comments</h4>
       </div>
       <div class="card-body">
@@ -29,7 +29,7 @@
           </p>
           {{!-- displays username --}}
           <p>
-            {{PlainPost.user.username}}
+            {{user.username}}
           </p>
         {{/each}}
         </div>
@@ -42,9 +42,6 @@
       <textarea class="form-control" id="comment-form" rows="5"></textarea>
       <button type="submit" class="btn comment-submit" id={{plainPost.id}}>Submit New Comment</button>
     </form>
-  </div>
-  <div>
-    <button class="btn-alert delete-button" id={{plainPost.id}}>🗑️</button>
-  </div>
+  </div>  
 </div>
 <script src="/js/comment.js"></script>
