@@ -1,5 +1,5 @@
-const router = require("express").Router();
-const { User } = require("../../models");
+const router    = require("express").Router();
+const { User }  = require("../../models");
 
 // CREATE new user
 router.post("/", async (req, res) => {
@@ -18,19 +18,15 @@ router.post("/", async (req, res) => {
 
     
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
 router.post("/login", async (req, res) => {
   try {
-    // console.log('INSIDE USER LOGIN ROUTE');
-    // console.log(req.body.username);
     const userData = await User.findOne({
       where: { username: req.body.username },
     });
-    // console.log(userData);
 
     if (!userData) {
       res

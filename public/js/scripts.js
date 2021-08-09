@@ -6,4 +6,6 @@ const redirectToForm = async () =>{
 document.getElementById('newpost')
 .addEventListener('click', redirectToForm);
 
-
+document.querySelectorAll('.delete-button').forEach(item => {
+    item.addEventListener('click', (event) => deletePost(event));
+})

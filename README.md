@@ -1,15 +1,22 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
 <p align="center">
-  <a href="https://github.com/shannonjburris/Clean_water_project">
-    <img src="./images/Thecleanwater.jpg" alt="Logo" width="250" height="250">
+  <a href="https://github.com/shannonjburris/Clean_water_project/graphs/contributors" alt="Contributors">
+    <img src="https://img.shields.io/badge/Contributors-4-green" />
   </a>
+  <a href="https://github.com/shannonjburris/Clean_water_project/issues" alt="Contributors">
+    <img src="https://img.shields.io/github/issues/shannonjburris/Clean_water_project" />
+  </a>
+  <a href="https://www.mit.edu/~amini/LICENSE.md" alt="Contributors">
+    <img src="https://img.shields.io/github/license/shannonjburris/Clean_water_project" />
+  </a>
+  <a href="https://github.com/shannonjburris/Clean_water_project" alt="Contributors">
+    <img src="https://img.shields.io/github/forks/shannonjburris/Clean_water_project" />
+  </a>
+</p>
+
+<br />
+
+![Screen Shot 2021-08-09 at 2 55 06 AM](https://user-images.githubusercontent.com/85806673/128670030-19a5de45-dec7-41c8-9a09-ec7a755ed26f.jpg)
+
 
   <h3 align="center"> The Clean Water Project</h3>
 
@@ -47,7 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-**The Problem:** Algae growth in Florida waterways is hard to identify and can be toxic to both human and pets.
+**The Problem:** Algae growth in Florida waterways is hard to identify and can be toxic to both human and animals.
 
 **Solution Proposal:** Our app uses crowdsourcing to identify and record algae in the Florida waterways to aid in public safety and encourage community engagement.
 
@@ -55,7 +62,6 @@
 ### Built With
 
 * [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-
 * [bcrypt](https://www.npmjs.com/package/bcryptjs)
 * [express](https://expressjs.com)
 * [handlebars](https://handlebarsjs.com/)
@@ -74,14 +80,12 @@ _For more examples, please refer to the [Documentation](https://github.com/shann
 
 
 
-<!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/shannonjburris/Clean_water_project/issues) for a list of proposals and known issues.
 
 
 
-<!-- LICENSE -->
 ## License
 
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://www.mit.edu/~amini/LICENSE.md)
@@ -91,11 +95,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
-<!-- CONTACT -->
-
 ## GitHub
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [The Clean Water Project](https://github.com/shannonjburris/Clean_water_project)
 
 Shannon's GitHub - [click here to view](https://github.com/shannonjburris) 
 
@@ -104,21 +106,4 @@ Romulo's GitHub - [click here to view](https://github.com/krooksoma)
 McKinley's Github - [click here to view](https://github.com/mcfulmer13)
 
 Todd's Github - [click here to view](https://github.com/Thetodd7)
-
-
-
-
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/shannonjburris/Clean_water_project/graphs/contributors
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/shannonjburris/Clean_water_project/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://www.mit.edu/~amini/LICENSE.md
 

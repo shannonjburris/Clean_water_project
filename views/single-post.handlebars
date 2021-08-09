@@ -1,40 +1,50 @@
-<div class="card text-decoration-none m-2 flex-row" style="width: 40rem;">
-  <div class="card-body">
-    <div class="card-header">
-      <h2 class="card-title">
-        {{plainPost.title}}
-      </h2>
-
-    </div>
-    <p class="card-text">
-      {{plainPost.body}}
-    </p>
-    <p> 🎯 Spotted at {{plainPost.location}} county.</p>
-    <p class="card-text user-name">Created by
-      {{plainPost.user.username}}
-
-      {{!-- {{format_date createdAt}} remember to implement this helper function --}}
-    </p>
-    {{#if plainPost.comments}}
-    <div class="card">
+<div class="container">
+  <div class="card text-decoration-none m-2 flex-row" style="width: 40rem;">
+    <div class="card-body">
       <div class="card-header">
-        {{!-- Get rid of this comments header on finished site --}}
-        <h4>Comments</h4>
+        <h2 class="card-title">
+          {{plainPost.title}}
+        </h2>
+
       </div>
-      <div class="card-body">
-        {{#each plainPost.comments}}
-        <div>
-          <p>
-            {{body}}
-          </p>
-          {{!-- displays username --}}
-          <p>
-            {{user.username}}
-          </p>
-        {{/each}}
+      <p class="card-text">
+        {{plainPost.body}}
+      </p>
+      <p class="card-text user-name">Created by
+        {{plainPost.user.username}}
+
+        {{!-- {{format_date createdAt}} remember to implement this helper function --}}
+      </p>
+      {{#if plainPost.comments}}
+      <div class="card">
+        <div class="card-header">
+          <h3>Comments</h3>
+        </div>
+        <div class="card-body">
+          {{#each plainPost.comments}}
+          <div>
+            <p>
+              {{body}}
+            </p>
+            <p>
+              &mdash; {{plainPost.user.username}}
+            </p>
+            {{/each}}
+          </div>
         </div>
       </div>
+      {{/if
+      }}
+      <form class="form" id="comment-button">
+        <label form="new-comment" class="form-label">Comment:</label>
+        <textarea class="form-control" id="comment-form" rows="5"></textarea>
+        <button type="submit" class="btn comment-submit" id={{plainPost.id}}>Submit New Comment</button>
+      </form>
     </div>
+    <div>
+      <button class="btn-alert delete-button" id={{plainPost.id}}>🗑️</button>
+    </div>
+<<<<<<< HEAD
     {{/if
     }}
     <form class="form" id="comment-button">
@@ -45,3 +55,8 @@
   </div>  
 </div>
 <script src="/js/comment.js"></script>
+=======
+  </div>
+  <script src="/js/comment.js"></script>
+</div>
+>>>>>>> c04826e8c3606db125698145ddd22ff8890b305b
