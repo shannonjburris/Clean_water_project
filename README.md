@@ -58,6 +58,13 @@
 
 **Solution Proposal:** Our app uses crowdsourcing to identify and record algae in the Florida waterways to aid in public safety and encourage community engagement.
 
+Deployed app:
+
+![Screen Shot 2021-08-09 at 5 17 06 PM](https://user-images.githubusercontent.com/85596303/128776006-f40657ac-c130-4324-97bf-0dbcb065c50c.png)
+![Screen Shot 2021-08-09 at 5 17 31 PM](https://user-images.githubusercontent.com/85596303/128776010-85fde1d5-c494-457e-ae58-b04d546390f9.png)
+![Screen Shot 2021-08-09 at 5 17 51 PM](https://user-images.githubusercontent.com/85596303/128776016-15657d62-64af-4d4b-a005-c0615e5d4505.png)
+
+
 
 ### Built With
 
@@ -95,7 +102,8 @@ See the [open issues](https://github.com/shannonjburris/Clean_water_project/issu
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
+## Heroku
+[Deployed App](https://algae-busters-clean-water-proj.herokuapp.com/)
 
 ## GitHub
 
