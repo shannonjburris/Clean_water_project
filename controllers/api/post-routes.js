@@ -1,9 +1,9 @@
 const { Post, User, Comment } = require("../../models");
-const withAuth                = require("../../utils/auth");
-const router                  = require("express").Router();
-const aws                     = require('aws-sdk');
-const multer                  = require('multer');
-const multerS3                = require('multer-s3');
+const withAuth=require("../../utils/auth");
+const router=require("express").Router();
+const aws=require('aws-sdk');
+const multer=require('multer');
+const multerS3=require('multer-s3');
 
 require("dotenv").config();
 
