@@ -13,13 +13,10 @@
   </a>
 </p>
 
-
-
 <br />
-<p align="center">
-  <a href="https://github.com/shannonjburris/Clean_water_project">
-    <img src="./images/Thecleanwater.jpg" alt="Logo" width="250" height="250">
-  </a>
+
+![Screen Shot 2021-08-09 at 2 55 06 AM](https://user-images.githubusercontent.com/85806673/128670030-19a5de45-dec7-41c8-9a09-ec7a755ed26f.jpg)
+
 
   <h3 align="center"> The Clean Water Project</h3>
 
@@ -57,7 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-**The Problem:** Algae growth in Florida waterways is hard to identify and can be toxic to both human and pets.
+**The Problem:** Algae growth in Florida waterways is hard to identify and can be toxic to both human and animals.
 
 **Solution Proposal:** Our app uses crowdsourcing to identify and record algae in the Florida waterways to aid in public safety and encourage community engagement.
 
