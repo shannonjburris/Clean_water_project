@@ -68,7 +68,9 @@
 * [express-session](https://www.npmjs.com/package/express-session)
 * [mysql2](https://www.npmjs.com/package/mysql2)
 * [sequelize](https://www.npmjs.com/package/sequelize)
-
+* [multer](https://www.npmjs.com/package/multer)
+* [multer S3](https://www.npmjs.com/package/multer-s3)
+* [aws-sdk](https://www.npmjs.com/package/aws-sdk)
 
 
 
