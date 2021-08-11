@@ -7,7 +7,7 @@ const deletePost = async (event) => {
         })
 
         if(deletePost.ok){
-            document.location.replace('/dashboard')
+            document.location.reload();
         }else{
             alert('Failed to Delete Post')
         }

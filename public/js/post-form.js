@@ -4,7 +4,7 @@ const submitNewPostForm = async (event) => {
         const title     = document.querySelector('#form-title').value.trim();
         const body      = document.querySelector('#form-body').value.trim();   
         const location  = document.querySelector('#dropdown').value;
-        let photo       = document.getElementById("photo").files[0];
+        let photo       = document.getElementById("photo").files[0] || '';
              
         const form = new FormData()
         form.append('title', title)
