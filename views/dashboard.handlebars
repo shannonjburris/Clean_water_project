@@ -21,14 +21,20 @@
     </div>
     {{!-- delete button on dashboard --}}
     <div>
+      {{!-- Remember to pass id to button and span in case user clicks anywhere --}}
       <button class="btn-alert delete-button" id={{post.id}}>
-        <span class="material-icons">delete_outline</span>
+        <span class="material-icons"id={{post.id}}>delete_outline</span>
       </button>
+      <a href="/dashboard/update/{{post.id}}">
+      <button class="update-route" >
+        Update Post
+      </button>
+      </a>
     </div>
   </div>
   {{/each}}
   {{else}}
-  <h4> you dont have any posts yet. Click on make an observation and create your first one today!</h4>
+  <h6> You don't have any posts yet. Click on make an observation and create your first one today!</h6>
   {{/if}}
   <script src="/js/delete-post.js"></script>
 </div>
