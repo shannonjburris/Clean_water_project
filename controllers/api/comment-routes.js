@@ -15,7 +15,7 @@ route.post('/:id', async (req, res) => {
               attributes: 'username'
             }            
         });
-        res.status(200)
+        res.status(200).json(commentData);
 
     } catch (err) {
       res.status(500).json(err);

@@ -22,6 +22,30 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.get("/update/:id", withAuth, async (req, res) => {
+  try{
+    console.log("Post ID: ", req.params.id);
+    const postInfo = await Post.findByPk(req.params.id)
+    // if(!postInfo){
+    //   res.status(400).end();
+    // }
+
+    console.log("Post number: ", post);
+
+    const postData = postInfo.get({ plain: true });
+
+    res.render("update", {
+      // postData,
+      logged_in: req.session.logged_in,
+      
+    });
+
+  }catch(error){
+    res.status(500).json(error);
+  }
+
+});
+
 
 router.get("/new", withAuth, (req, res) => {
   res.render("new-post",{
